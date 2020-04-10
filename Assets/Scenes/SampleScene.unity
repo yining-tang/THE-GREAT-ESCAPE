@@ -224,6 +224,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1108633218874261038, guid: a12987e9ec87d2247909e40a7bb817cb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1528390485586823269, guid: a12987e9ec87d2247909e40a7bb817cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -592,6 +597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d34a88cfeba3b5c408a6cabaf6840ae7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d34a88cfeba3b5c408a6cabaf6840ae7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.525001
@@ -759,6 +768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108633218874261038, guid: a12987e9ec87d2247909e40a7bb817cb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1528390485586823269, guid: a12987e9ec87d2247909e40a7bb817cb,
         type: 3}
@@ -935,6 +949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Temple Object Small
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 305b0b80d14039f45840ba73e9fe87ac, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 305b0b80d14039f45840ba73e9fe87ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.841242
@@ -1073,6 +1091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Grass Pilar
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 51baaa3960cd926448cdf91455537638, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 51baaa3960cd926448cdf91455537638, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.160078
@@ -1207,6 +1229,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platforms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108633218874261038, guid: a12987e9ec87d2247909e40a7bb817cb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1528390485586823269, guid: a12987e9ec87d2247909e40a7bb817cb,
         type: 3}
