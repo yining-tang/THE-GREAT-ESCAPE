@@ -21,22 +21,24 @@ public class Player : MonoBehaviour
     {
         var v = Input.GetAxis("Vertical");
         var h = Input.GetAxis("Horizontal");
-        anim.SetFloat("speed", v);
-        anim.SetFloat("Turningspeed", h);
+        //anim.SetFloat("speed", v);
+        //anim.SetFloat("Turningspeed", h);
 
+        anim.SetFloat("speed", v);
+        anim.SetFloat("horizontal", h);
         if (Input.GetButtonDown("Jump"))
         {
             rigid.AddForce(Vector3.up * JumpForce);
             anim.SetTrigger("Jump");
         }
-        if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, groundDistance, whatIsGround))
-        {
-            anim.SetBool("grounded", true);
-            anim.applyRootMotion = true;
-        }
-        else
-        {
-            anim.SetBool("grounded", false);
-        }
+        //if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, groundDistance, whatIsGround))
+        //{
+        //    anim.SetBool("grounded", true);
+        //    anim.applyRootMotion = true;
+        //}
+        //else
+        //{
+        //    anim.SetBool("grounded", false);
+        //}
     }
 }
