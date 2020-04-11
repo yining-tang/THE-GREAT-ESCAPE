@@ -23,9 +23,16 @@ public class Player : MonoBehaviour
         var h = Input.GetAxis("Horizontal");
         //anim.SetFloat("speed", v);
         //anim.SetFloat("Turningspeed", h);
-
+        if(v > 0)
+        {
         anim.SetFloat("speed", v);
         anim.SetFloat("horizontal", h);
+        }
+        else
+        {
+            anim.SetFloat("speed", -1);
+        }
+        
         if (Input.GetButtonDown("Jump"))
         {
             rigid.AddForce(Vector3.up * JumpForce);
