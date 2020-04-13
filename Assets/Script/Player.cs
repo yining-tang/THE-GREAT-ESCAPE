@@ -23,7 +23,8 @@ public class Player : MonoBehaviour
         var h = Input.GetAxis("Horizontal");
         //anim.SetFloat("speed", v);
         //anim.SetFloat("Turningspeed", h);
-        if(v > 0)
+       
+        if (v > 0)
         {
         anim.SetFloat("speed", v);
         anim.SetFloat("horizontal", h);
@@ -35,8 +36,10 @@ public class Player : MonoBehaviour
         
         if (Input.GetButtonDown("Jump"))
         {
+            anim.Play("jump");
             rigid.AddForce(Vector3.up * JumpForce);
-            anim.SetTrigger("Jump");
+            
+           // anim.SetTrigger("Jump");
         }
         //if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, groundDistance, whatIsGround))
         //{
