@@ -953,7 +953,7 @@ MonoBehaviour:
   gravityscale: 2
   anim: {fileID: 8828333699944148684}
   pivot: {fileID: 1633738467}
-  rotatespeed: 25
+  rotatespeed: 10
   player: {fileID: 2474112960189280677}
 --- !u!1 &615875201
 GameObject:
@@ -2223,7 +2223,7 @@ MonoBehaviour:
   rotatespeed: 2
   pivot: {fileID: 1633738467}
   maxview: 45
-  minview: -60
+  minview: -45
   inverY: 0
 --- !u!1 &1464157019
 GameObject:

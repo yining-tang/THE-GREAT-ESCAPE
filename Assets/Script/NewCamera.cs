@@ -21,6 +21,8 @@ public class NewCamera : MonoBehaviour
         }
         pivot.transform.position = player.transform.position;
         //pivot.transform.parent = player.transform;
+        pivot.transform.parent = null;
+
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -29,8 +31,7 @@ public class NewCamera : MonoBehaviour
     {
 
         pivot.transform.position = player.transform.position;
-        pivot.transform.parent = null;
-
+        
         //player rotate
         float horizontal = Input.GetAxis("Mouse X") * rotatespeed;
         pivot.Rotate(0, horizontal, 0);
@@ -50,14 +51,14 @@ public class NewCamera : MonoBehaviour
         //limit the movement
         if (pivot.rotation.eulerAngles.x > maxview && pivot.rotation.eulerAngles.x < 180f)
         {
-            pivot.rotation = Quaternion.Euler(45f, 0, 0);
+            pivot.rotation = Quaternion.Euler(maxview, pivot.eulerAngles.y, 0f);
         }
         if (pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < 360f + minview)
         {
-            pivot.rotation = Quaternion.Euler(360f + minview, 0, 0);
+            pivot.rotation = Quaternion.Euler(360f + minview, pivot.eulerAngles.y, 0f);
         }
             //camera rotate
-            float Yangle = pivot.eulerAngles.y;
+        float Yangle = pivot.eulerAngles.y;
         float Xangle = pivot.eulerAngles.x;
         Quaternion rotation = Quaternion.Euler(Xangle, Yangle, 0);
         transform.position = player.position - (rotation * offset);
