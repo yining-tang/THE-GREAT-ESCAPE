@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 598429768}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1000,7 +1000,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619357493}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 3
   m_Height: 1
@@ -2218,7 +2218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 598429772}
-  offset: {x: 0, y: 0, z: 8}
+  offset: {x: 0, y: -3, z: 8}
   useOffsetvalue: 0
   rotatespeed: 2
   pivot: {fileID: 1633738467}
@@ -3403,7 +3403,7 @@ GameObject:
   - component: {fileID: 8828333699944148684}
   m_Layer: 0
   m_Name: aj
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
