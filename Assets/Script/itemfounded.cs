@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class itemfounded : MonoBehaviour
 {
+    public EventManager manager;
    // public enemycounter Mycounter;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class itemfounded : MonoBehaviour
         {
             Destroy(this);
             Destroy(gameObject);
+            manager.counter++;
             //Mycounter.itemfound = true;
         }
     }
