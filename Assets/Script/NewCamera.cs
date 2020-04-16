@@ -12,6 +12,7 @@ public class NewCamera : MonoBehaviour
     public float maxview;
     public float minview;
     public bool inverY;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -31,22 +32,22 @@ public class NewCamera : MonoBehaviour
     {
 
         pivot.transform.position = player.transform.position;
-        
+
         //player rotate
         float horizontal = Input.GetAxis("Mouse X") * rotatespeed;
-        pivot.Rotate(0, horizontal, 0);
+        pivot.Rotate(0, horizontal, 0, Space.World);
 
         //pivot movement
 
         float vertical = Input.GetAxis("Mouse Y") * rotatespeed;
-        
-        if(inverY)
+
+        if (inverY)
         {
-        pivot.Rotate(vertical, 0, 0);
+            pivot.Rotate(vertical, 0, 0, Space.World);
         }
         else
         {
-            pivot.Rotate(-vertical, 0, 0);
+            pivot.Rotate(-vertical, 0, 0, Space.World);
         }
         //limit the movement
         if (pivot.rotation.eulerAngles.x > maxview && pivot.rotation.eulerAngles.x < 180f)
@@ -57,10 +58,11 @@ public class NewCamera : MonoBehaviour
         {
             pivot.rotation = Quaternion.Euler(360f + minview, pivot.eulerAngles.y, 0f);
         }
-            //camera rotate
+        //camera rotate
         float Yangle = pivot.eulerAngles.y;
         float Xangle = pivot.eulerAngles.x;
         Quaternion rotation = Quaternion.Euler(Xangle, Yangle, 0);
+
         transform.position = player.position - (rotation * offset);
 
         //transform.position = player.position - offset;
@@ -68,8 +70,6 @@ public class NewCamera : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, player.position.y, transform.position.z);
         }
-
-
 
         transform.LookAt(player);
     }

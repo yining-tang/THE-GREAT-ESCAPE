@@ -986,7 +986,7 @@ MonoBehaviour:
   gravityscale: 2
   anim: {fileID: 8828333699944148684}
   pivot: {fileID: 1633738467}
-  rotatespeed: 10
+  rotatespeed: 15
   player: {fileID: 2474112960189280677}
 --- !u!1 &615875201
 GameObject:
@@ -2405,12 +2405,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 598429772}
-  offset: {x: 0, y: -3, z: 8}
+  offset: {x: 0, y: -2, z: 5}
   useOffsetvalue: 0
   rotatespeed: 2
   pivot: {fileID: 1633738467}
-  maxview: 45
-  minview: -75
+  maxview: 65
+  minview: -60
   inverY: 0
 --- !u!1 &1442476449 stripped
 GameObject:
