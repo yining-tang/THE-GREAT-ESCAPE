@@ -14,10 +14,12 @@ public class NewPlayerMovement : MonoBehaviour
     public Transform pivot;
     public float rotatespeed;
     public GameObject player;
+    private AudioSource audio;
     void Start()
     {
         // rbody = GetComponent<Rigidbody>();
         controller = GetComponent<CharacterController>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class NewPlayerMovement : MonoBehaviour
             movedirection.y = 0f;
             if (Input.GetButtonDown("Jump"))
             {
+                audio.Play();
                 movedirection.y = jumpforce;
             }
         }

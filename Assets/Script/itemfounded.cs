@@ -5,11 +5,12 @@ using UnityEngine;
 public class itemfounded : MonoBehaviour
 {
     public EventManager manager;
-   // public enemycounter Mycounter;
+    private AudioSource audio;
+    // public enemycounter Mycounter;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -18,6 +19,7 @@ public class itemfounded : MonoBehaviour
         {
             Destroy(this);
             Destroy(gameObject);
+            audio.Play();
             manager.counter++;
             //Mycounter.itemfound = true;
         }
