@@ -72,5 +72,9 @@ public class NewCamera : MonoBehaviour
         }
 
         transform.LookAt(player);
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
