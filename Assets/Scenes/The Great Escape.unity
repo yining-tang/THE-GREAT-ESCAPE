@@ -794,6 +794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1061376915}
+  source: {fileID: 0}
 --- !u!136 &566691063
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1172,7 +1173,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e03eb939c9e00564bbc37ac2cf7e0213, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.391
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1320,6 +1321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1061376915}
+  source: {fileID: 0}
 --- !u!82 &619357497
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2920,6 +2922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1061376915}
+  source: {fileID: 0}
 --- !u!136 &1442476451
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2952,7 +2955,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 78
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -3873,7 +3876,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f573e1a5f4787ca4e9acfaf062317ef3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.175
+  m_Volume: 0.025
   m_Pitch: 1
   Loop: 1
   Mute: 0
