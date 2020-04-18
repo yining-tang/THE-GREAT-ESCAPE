@@ -37,4 +37,5 @@ public class EventManager : MonoBehaviour
             goldkeymade = true;
         }
     }
+
 }

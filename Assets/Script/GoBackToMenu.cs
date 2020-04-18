@@ -18,6 +18,7 @@ public class GoBackToMenu : MonoBehaviour
         {
             Application.LoadLevel(0);
         }
+   
     }
 }
 
