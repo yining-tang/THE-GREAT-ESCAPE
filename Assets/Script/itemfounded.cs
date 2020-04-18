@@ -6,11 +6,13 @@ public class itemfounded : MonoBehaviour
 {
     public EventManager manager;
     public AudioSource source;
+    public Collider collider;
     // public enemycounter Mycounter;
     // Start is called before the first frame update
     void Start()
     {
-        source = GetComponent<AudioSource>();
+        //source = GetComponent<AudioSource>();
+        collider = GetComponent<Collider>();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -19,7 +21,7 @@ public class itemfounded : MonoBehaviour
         {
             manager.counter++;
             source.Play();
-            
+            collider.enabled = false;
             Destroy(gameObject);
            Destroy(this);
             
