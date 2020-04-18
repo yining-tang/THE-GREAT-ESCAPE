@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EventManager : MonoBehaviour
 {
@@ -11,11 +12,14 @@ public class EventManager : MonoBehaviour
     private int origin_y;
     public UnityEngine.Events.UnityEvent GoldenKey;
     bool goldkeymade;
+    private float startTime;
+    private bool finished = false;
     GUIStyle style;
     // Start is called before the first frame update
     void Start()
     {
         counter = 0;
+        startTime = Time.time;
         buttonHeight = 50;
         buttonwidth = 60;
         origin_x = 100;
@@ -25,8 +29,15 @@ public class EventManager : MonoBehaviour
     }
     private void OnGUI()
     {
+        if(finished)
+            return;
+
         style.fontSize = 24;
+        float ellapsedTime = Time.time - startTime;
+        string minutes = ((int)ellapsedTime / 60).ToString();
+        string seconds = (ellapsedTime % 60).ToString("f2");
         GUI.Label(new Rect(origin_x, origin_y, buttonwidth, buttonHeight), "Keys:" + counter.ToString(),style);
+        GUI.Label(new Rect(origin_x, origin_y + 35, buttonwidth, buttonHeight), "Time: " + minutes + ":" + seconds , style); 
     }
     // Update is called once per frame
     void Update()
@@ -38,4 +49,8 @@ public class EventManager : MonoBehaviour
         }
     }
 
+    public void Finished()
+    {
+        finished = true;
+    }
 }
