@@ -15,6 +15,9 @@ public class EventManager : MonoBehaviour
     private float startTime;
     private bool finished = false;
     GUIStyle style;
+    float ellapsedTime;
+    string minutes;
+    string seconds;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,9 @@ public class EventManager : MonoBehaviour
         origin_y = 20;
         style = new GUIStyle();
         goldkeymade = false;
+        ellapsedTime = Time.time - startTime;
+        minutes = ((int)ellapsedTime / 60).ToString();
+        seconds = (ellapsedTime % 60).ToString("f2");
     }
     private void OnGUI()
     {
@@ -38,9 +44,18 @@ public class EventManager : MonoBehaviour
             //return;
 
         style.fontSize = 24;
-        float ellapsedTime = Time.time - startTime;
-        string minutes = ((int)ellapsedTime / 60).ToString();
-        string seconds = (ellapsedTime % 60).ToString("f2");
+        
+        if(finished)
+        {
+            //stop the timer
+        }
+        else
+        {
+            ellapsedTime = Time.time - startTime;
+            minutes = ((int)ellapsedTime / 60).ToString();
+            seconds = (ellapsedTime % 60).ToString("f2");
+
+        }
         GUI.Label(new Rect(origin_x, origin_y, buttonwidth, buttonHeight), "Keys:" + counter.ToString(),style);
         GUI.Label(new Rect(origin_x, origin_y + 35, buttonwidth, buttonHeight), "Time: " + minutes + ":" + seconds , style); 
     }
