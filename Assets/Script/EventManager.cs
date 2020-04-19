@@ -29,8 +29,13 @@ public class EventManager : MonoBehaviour
     }
     private void OnGUI()
     {
-        if(finished)
-            return;
+        //if(!finished)
+        //{
+        //    float ellapsedTime = Time.time - startTime;
+        //    string minutes = ((int)ellapsedTime / 60).ToString();
+        //     string seconds = (ellapsedTime % 60).ToString("f2");
+        //}
+            //return;
 
         style.fontSize = 24;
         float ellapsedTime = Time.time - startTime;
