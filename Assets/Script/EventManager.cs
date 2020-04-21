@@ -18,6 +18,10 @@ public class EventManager : MonoBehaviour
     float ellapsedTime;
     string minutes;
     string seconds;
+
+    public GameObject TxtYouWin;
+    public GameObject TxtRestart;
+    public float resetDelay;
     // Start is called before the first frame update
     void Start()
     {
@@ -72,5 +76,20 @@ public class EventManager : MonoBehaviour
     public void Finished()
     {
         finished = true;
+    }
+
+    public void Win()
+    {
+        //display message
+        TxtYouWin.SetActive(true);
+        TxtRestart.SetActive(true);
+        Time.timeScale = 0.5f;
+        Invoke("Reset", resetDelay);
+    }
+
+    public void Reset()
+    {
+        Time.timeScale = 1f;
+        Application.LoadLevel(1);
     }
 }
