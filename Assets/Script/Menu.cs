@@ -23,6 +23,7 @@ public class Menu : MonoBehaviour
         GUI.skin = mySkin;
         if (GUI.Button(new Rect(origin_x, origin_y, buttonWidth, buttonHeight), "Scene 1"))
         {
+            Cursor.lockState = CursorLockMode.Locked;
             Application.LoadLevel(1);
         }
         /*

@@ -25,56 +25,57 @@ public class NewCamera : MonoBehaviour
         pivot.transform.parent = null;
 
         Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-
-        pivot.transform.position = player.transform.position;
-
-        //player rotate
-        float horizontal = Input.GetAxis("Mouse X") * rotatespeed;
-        pivot.Rotate(0, horizontal, 0, Space.World);
-
-        //pivot movement
-
-        float vertical = Input.GetAxis("Mouse Y") * rotatespeed;
-
-        if (inverY)
+        if (!PauseMenu1.GameIsPaused)
         {
-            pivot.Rotate(vertical, 0, 0, Space.World);
-        }
-        else
-        {
-            pivot.Rotate(-vertical, 0, 0, Space.World);
-        }
-        //limit the movement
-        if (pivot.rotation.eulerAngles.x > maxview && pivot.rotation.eulerAngles.x < 180f)
-        {
-            pivot.rotation = Quaternion.Euler(maxview, pivot.eulerAngles.y, 0f);
-        }
-        if (pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < 360f + minview)
-        {
-            pivot.rotation = Quaternion.Euler(360f + minview, pivot.eulerAngles.y, 0f);
-        }
-        //camera rotate
-        float Yangle = pivot.eulerAngles.y;
-        float Xangle = pivot.eulerAngles.x;
-        Quaternion rotation = Quaternion.Euler(Xangle, Yangle, 0);
+            pivot.transform.position = player.transform.position;
 
-        transform.position = player.position - (rotation * offset);
+            //player rotate
+            float horizontal = Input.GetAxis("Mouse X") * rotatespeed;
+            pivot.Rotate(0, horizontal, 0, Space.World);
 
-        //transform.position = player.position - offset;
-        if (transform.position.y < player.position.y)
-        {
-            transform.position = new Vector3(transform.position.x, player.position.y, transform.position.z);
-        }
+            //pivot movement
 
-        transform.LookAt(player);
-        if(Input.GetKey(KeyCode.Escape))
-        {
-            Cursor.lockState = CursorLockMode.None;
+            float vertical = Input.GetAxis("Mouse Y") * rotatespeed;
+
+            if (inverY)
+            {
+                pivot.Rotate(vertical, 0, 0, Space.World);
+            }
+            else
+            {
+                pivot.Rotate(-vertical, 0, 0, Space.World);
+            }
+            //limit the movement
+            if (pivot.rotation.eulerAngles.x > maxview && pivot.rotation.eulerAngles.x < 180f)
+            {
+                pivot.rotation = Quaternion.Euler(maxview, pivot.eulerAngles.y, 0f);
+            }
+            if (pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < 360f + minview)
+            {
+                pivot.rotation = Quaternion.Euler(360f + minview, pivot.eulerAngles.y, 0f);
+            }
+            //camera rotate
+            float Yangle = pivot.eulerAngles.y;
+            float Xangle = pivot.eulerAngles.x;
+            Quaternion rotation = Quaternion.Euler(Xangle, Yangle, 0);
+
+            transform.position = player.position - (rotation * offset);
+
+            //transform.position = player.position - offset;
+            if (transform.position.y < player.position.y)
+            {
+                transform.position = new Vector3(transform.position.x, player.position.y, transform.position.z);
+            }
+
+            transform.LookAt(player);
         }
+        
+        
     }
 }
