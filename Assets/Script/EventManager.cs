@@ -81,6 +81,7 @@ public class EventManager : MonoBehaviour
     public void Win()
     {
         //display message
+        finished = true;
         TxtYouWin.SetActive(true);
         TxtRestart.SetActive(true);
         Time.timeScale = 0.5f;
