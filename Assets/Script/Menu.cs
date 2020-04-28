@@ -21,10 +21,16 @@ public class Menu : MonoBehaviour
     void OnGUI()
     {
         GUI.skin = mySkin;
-        if (GUI.Button(new Rect(origin_x, origin_y, buttonWidth, buttonHeight), "Scene 1"))
+        if (GUI.Button(new Rect(origin_x, origin_y, buttonWidth, buttonHeight), "Level 1"))
         {
             Cursor.lockState = CursorLockMode.Locked;
             Application.LoadLevel(1);
+        }
+        
+        if (GUI.Button(new Rect(origin_x, origin_y+55f, buttonWidth, buttonHeight), "Level 2"))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Application.LoadLevel(2);
         }
         /*
        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight + 20, buttonWidth, buttonHeight), "Scene 2"))
