@@ -13,9 +13,9 @@ public class Menu : MonoBehaviour
     void Start()
     {
         buttonWidth = 200;
-        buttonHeight = 50;
+        buttonHeight = 40;
         origin_x = Screen.width / 2 - buttonWidth / 2;
-        origin_y = Screen.height / 2 - buttonHeight * 2;
+        origin_y = Screen.height / 5- buttonHeight * 2;
     }
 
     void OnGUI()
@@ -27,7 +27,7 @@ public class Menu : MonoBehaviour
             Application.LoadLevel(1);
         }
         
-        if (GUI.Button(new Rect(origin_x, origin_y+55f, buttonWidth, buttonHeight), "Level 2"))
+        if (GUI.Button(new Rect(origin_x, origin_y+80f, buttonWidth, buttonHeight), "Level 2"))
         {
             Cursor.lockState = CursorLockMode.Locked;
             Application.LoadLevel(2);
@@ -42,7 +42,7 @@ public class Menu : MonoBehaviour
           Application.LoadLevel(3);
       }
       */
-        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 3 + 60, buttonWidth, buttonHeight), "Quit"))
+        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 3 + 110, buttonWidth, buttonHeight), "Quit"))
         {
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
