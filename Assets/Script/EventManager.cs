@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class EventManager : MonoBehaviour
 {
     public int counter;
@@ -88,6 +88,20 @@ public class EventManager : MonoBehaviour
         Invoke("Reset", resetDelay);
     }
 
+    public void Lose()
+    {
+        //display message
+        finished = true;
+        TxtYouWin.SetActive(true);
+        TxtRestart.SetActive(true);
+        Time.timeScale = 0.5f;
+        Invoke("ResetSameLevel", resetDelay);
+    }
+
+    public void ResetSameLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     public void Reset()
     {
         Time.timeScale = 1f;
