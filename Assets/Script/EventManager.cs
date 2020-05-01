@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EventManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class EventManager : MonoBehaviour
 
     public GameObject TxtYouWin;
     public GameObject TxtRestart;
+    public GameObject TxtYouDied;
     public float resetDelay;
     // Start is called before the first frame update
     void Start()
@@ -87,7 +89,19 @@ public class EventManager : MonoBehaviour
         Time.timeScale = 0.5f;
         Invoke("Reset", resetDelay);
     }
+    public void Dead()
+    {
+        //display message
+        finished = true;
+        TxtYouDied.SetActive(true);
+        TxtRestart.SetActive(true);
+        Invoke("ResetCurrentLevel",4); ;
+    }
 
+    public void ResetCurrentLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     public void Reset()
     {
         Time.timeScale = 1f;
