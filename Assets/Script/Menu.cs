@@ -32,6 +32,11 @@ public class Menu : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Application.LoadLevel(2);
         }
+        if (GUI.Button(new Rect(origin_x, origin_y + 160f, buttonWidth, buttonHeight), "Level 3"))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Application.LoadLevel(3);
+        }
         /*
        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight + 20, buttonWidth, buttonHeight), "Scene 2"))
        {
