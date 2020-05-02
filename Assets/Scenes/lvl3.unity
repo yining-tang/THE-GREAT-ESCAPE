@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10940,7 +10940,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.1e-44, y: 1e-44, z: 1.1754945e-38, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 132612, z: NaN, w: 160.5957}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -18824,7 +18824,7 @@ GameObject:
   - component: {fileID: 1209718526}
   - component: {fileID: 1209718525}
   - component: {fileID: 1209718529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21098,7 +21098,7 @@ GameObject:
   - component: {fileID: 1383369341}
   - component: {fileID: 1383369340}
   - component: {fileID: 1383369344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21783,6 +21783,7 @@ GameObject:
   - component: {fileID: 1435760212}
   - component: {fileID: 1435760211}
   - component: {fileID: 1435760213}
+  - component: {fileID: 1435760214}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -21798,7 +21799,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435760209}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.01, y: 2.8899999, z: 10.449999}
+  m_LocalPosition: {x: -2.01, y: 2.8899999, z: 8.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1633738467}
@@ -21863,7 +21864,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435760209}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57c0034732037584ab2b7d5dad8c1403, type: 3}
   m_Name: 
@@ -21876,6 +21877,34 @@ MonoBehaviour:
   maxview: 65
   minview: -70
   inverY: 0
+--- !u!114 &1435760214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435760209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f90eeff742db49439cad8ce2b4ca122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockCursor: 0
+  mouseSensitivity: 3
+  target: {fileID: 598429772}
+  distFromTarget: 5
+  pitchMinMax: {x: -70, y: 65}
+  rotationSmoothTime: 1
+  changeTransparency: 1
+  targetRenderer: {fileID: 598429770}
+  moveSpeed: 1
+  returnSpeed: 5
+  wallPush: 0.6
+  closestDistanceToPlayer: 2
+  evenCloserDistanceToPlayer: 1
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &1442476449 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 155280, guid: 41d1cac196452694fb10f2476db79e6e,
@@ -23329,7 +23358,7 @@ GameObject:
   - component: {fileID: 1526899013}
   - component: {fileID: 1526899012}
   - component: {fileID: 1526899016}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28338,7 +28367,7 @@ GameObject:
   - component: {fileID: 1800764046}
   - component: {fileID: 1800764045}
   - component: {fileID: 1800764049}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
