@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour {
 	public float distFromTarget = 2;
 	public Vector2 pitchMinMax = new Vector2(-40,85);
 
-	public float rotationSmoothTime = 1f;
+	public float rotationSmoothTime = 0.1f;
 	Vector3 rotationSmoothVelocity;
 	Vector3 currentRotation;
 
@@ -56,18 +56,18 @@ public class CameraController : MonoBehaviour {
 		if (!pitchLock) {
 			yaw += Input.GetAxis ("Mouse X") * mouseSensitivity;
 			pitch -= Input.GetAxis ("Mouse Y") * mouseSensitivity;
-			pitch = Mathf.Clamp (pitch, pitchMinMax.x, pitchMinMax.y);
-			currentRotation = Vector3.Lerp (currentRotation, new Vector3 (pitch, yaw), rotationSmoothTime * Time.deltaTime);
+			//pitch = Mathf.Clamp (pitch, pitchMinMax.x, pitchMinMax.y);
+			currentRotation = Vector3.LerpUnclamped(currentRotation, new Vector3 (pitch, yaw), rotationSmoothTime * Time.deltaTime);
 		} else {
 
 			yaw += Input.GetAxis ("Mouse X") * mouseSensitivity;
-			pitch = pitchMinMax.y;
+			//pitch = pitchMinMax.y;
 
-			currentRotation = Vector3.Lerp (currentRotation, new Vector3 (pitch, yaw), rotationSmoothTime * Time.deltaTime);
+			currentRotation = Vector3.LerpUnclamped(currentRotation, new Vector3 (pitch, yaw), rotationSmoothTime * Time.deltaTime);
 
 		}
 			
-
+		
 		transform.eulerAngles = currentRotation;
 
 		Vector3 e = transform.eulerAngles;
