@@ -20,7 +20,7 @@ public class platformMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        movingPlat.position = Vector3.Lerp(movingPlat.position, newPost, smooth * Time.deltaTime);
+        movingPlat.position = Vector3.Lerp(movingPlat.position, newPost, smooth * Time.deltaTime- (float)(0.005));
     }
     void TargetChange()
     {
