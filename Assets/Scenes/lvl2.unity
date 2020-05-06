@@ -5812,6 +5812,7 @@ MonoBehaviour:
   TxtRestart: {fileID: 1118043019}
   TxtYouDied: {fileID: 0}
   resetDelay: 5
+  losedelay: 3
 --- !u!82 &1061376916
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11846,6 +11847,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c83a74a99402e347b46b27bd029788a, type: 2}
+    - target: {fileID: 6294483020002769981, guid: 2f562f1184ae23b4e982d05e033e56fc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f562f1184ae23b4e982d05e033e56fc, type: 3}
 --- !u!1 &6392898739347023845

@@ -24,6 +24,7 @@ public class goldenKey : MonoBehaviour
     public void GoldenKeyMake()
     {
         Instantiate(Goldenkey, transform.position, Quaternion.identity);
+        manager.GoldKeyActive = true;
     }
     
     // Start is called before the first frame update

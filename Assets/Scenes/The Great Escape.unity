@@ -4237,6 +4237,7 @@ MonoBehaviour:
   TxtRestart: {fileID: 1118043019}
   TxtYouDied: {fileID: 0}
   resetDelay: 5
+  losedelay: 3
 --- !u!82 &1061376916
 AudioSource:
   m_ObjectHideFlags: 0

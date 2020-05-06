@@ -19,11 +19,13 @@ public class EventManager : MonoBehaviour
     float ellapsedTime;
     string minutes;
     string seconds;
-
+    
     public GameObject TxtYouWin;
     public GameObject TxtRestart;
     public GameObject TxtYouDied;
     public float resetDelay;
+    public float losedelay;
+    public bool GoldKeyActive=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -83,11 +85,14 @@ public class EventManager : MonoBehaviour
     public void Win()
     {
         //display message
-        finished = true;
-        TxtYouWin.SetActive(true);
-        TxtRestart.SetActive(true);
-        Time.timeScale = 0.5f;
-        Invoke("Reset", resetDelay);
+        if (GoldKeyActive)
+        {
+            finished = true;
+            TxtYouWin.SetActive(true);
+            TxtRestart.SetActive(true);
+            Time.timeScale = 0.5f;
+            Invoke("Reset", resetDelay);
+        }
     }
     public void Dead()
     {
@@ -95,7 +100,7 @@ public class EventManager : MonoBehaviour
         finished = true;
         TxtYouDied.SetActive(true);
         TxtRestart.SetActive(true);
-        Invoke("ResetCurrentLevel",4); ;
+        Invoke("ResetCurrentLevel",losedelay); ;
     }
 
     public void ResetCurrentLevel()
@@ -105,7 +110,7 @@ public class EventManager : MonoBehaviour
     public void Reset()
     {
         Time.timeScale = 1f;
-        if (SceneManager.GetActiveScene().buildIndex != 3)
+        if (SceneManager.GetActiveScene().buildIndex != 4)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
