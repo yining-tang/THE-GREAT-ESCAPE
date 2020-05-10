@@ -64,8 +64,8 @@ public class EventManager : MonoBehaviour
             seconds = (ellapsedTime % 60).ToString("f2");
 
         }
-        GUI.Label(new Rect(origin_x, origin_y, buttonwidth, buttonHeight), " "+counter.ToString()+ " / 3", style);
-        GUI.Label(new Rect(origin_x, origin_y + 35, buttonwidth, buttonHeight), minutes + ":" + seconds , style); 
+        GUI.Label(new Rect(origin_x, origin_y, buttonwidth, buttonHeight), "Keys:" + counter.ToString(),style);
+        GUI.Label(new Rect(origin_x, origin_y + 35, buttonwidth, buttonHeight), "Time: " + minutes + ":" + seconds , style); 
     }
     // Update is called once per frame
     void Update()
