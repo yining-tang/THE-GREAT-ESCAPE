@@ -16,6 +16,7 @@ public class Menu : MonoBehaviour
         buttonHeight = 40;
         origin_x = Screen.width / 2 - buttonWidth / 2;
         origin_y = Screen.height / 5- buttonHeight * 2;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     void OnGUI()
