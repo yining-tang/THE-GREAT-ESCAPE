@@ -1,10 +1,12 @@
 fileFormatVersion: 2
-guid: 4164b771c2b784c2da3cbe10847a182e
+guid: 604c8e250817f485c97f85e8237f7524
 labels:
-- Sky
-- Skies
 - AllSky
+- Skies
+- Sky
 - Skybox
+timeCreated: 1481465713
+licenseType: Store
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 4
@@ -27,8 +29,8 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 32
+  textureFormat: 1
+  maxTextureSize: 2048
   textureSettings:
     filterMode: -1
     aniso: -1
