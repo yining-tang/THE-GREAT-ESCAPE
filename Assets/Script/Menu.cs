@@ -38,6 +38,13 @@ public class Menu : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Application.LoadLevel(3);
         }
+
+        if (GUI.Button(new Rect(origin_x, origin_y + 240f, buttonWidth, buttonHeight), "Level 4"))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Application.LoadLevel(4);
+        }
+
         /*
        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight + 20, buttonWidth, buttonHeight), "Scene 2"))
        {
@@ -48,7 +55,7 @@ public class Menu : MonoBehaviour
           Application.LoadLevel(3);
       }
       */
-        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 3 + 110, buttonWidth, buttonHeight), "Quit"))
+        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 4 + 210, buttonWidth, buttonHeight), "Quit"))
         {
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
