@@ -22,24 +22,24 @@ public class Menu : MonoBehaviour
     void OnGUI()
     {
         GUI.skin = mySkin;
-        if (GUI.Button(new Rect(origin_x, origin_y, buttonWidth, buttonHeight), "Level 1"))
+        if (GUI.Button(new Rect(origin_x, origin_y+80, buttonWidth, buttonHeight), "Level 1"))
         {
             Cursor.lockState = CursorLockMode.Locked;
             Application.LoadLevel(1);
         }
         
-        if (GUI.Button(new Rect(origin_x, origin_y+80f, buttonWidth, buttonHeight), "Level 2"))
+        if (GUI.Button(new Rect(origin_x, origin_y+160f, buttonWidth, buttonHeight), "Level 2"))
         {
             Cursor.lockState = CursorLockMode.Locked;
             Application.LoadLevel(2);
         }
-        if (GUI.Button(new Rect(origin_x, origin_y + 160f, buttonWidth, buttonHeight), "Level 3"))
+        if (GUI.Button(new Rect(origin_x, origin_y + 240f, buttonWidth, buttonHeight), "Level 3"))
         {
             Cursor.lockState = CursorLockMode.Locked;
             Application.LoadLevel(3);
         }
 
-        if (GUI.Button(new Rect(origin_x, origin_y + 240f, buttonWidth, buttonHeight), "Level 4"))
+        if (GUI.Button(new Rect(origin_x, origin_y + 320f, buttonWidth, buttonHeight), "Level 4"))
         {
             Cursor.lockState = CursorLockMode.Locked;
             Application.LoadLevel(4);
@@ -55,7 +55,7 @@ public class Menu : MonoBehaviour
           Application.LoadLevel(3);
       }
       */
-        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 4 + 210, buttonWidth, buttonHeight), "Quit"))
+        if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 4 + 250, buttonWidth, buttonHeight), "Quit"))
         {
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
