@@ -23,6 +23,7 @@ public class EventManager : MonoBehaviour
     public GameObject TxtYouWin;
     public GameObject TxtRestart;
     public GameObject TxtYouDied;
+    public GameObject textYouDieRestart;
     public float resetDelay;
     public float losedelay;
     public bool GoldKeyActive=false;
@@ -99,7 +100,7 @@ public class EventManager : MonoBehaviour
         //display message
         finished = true;
         TxtYouDied.SetActive(true);
-        TxtRestart.SetActive(true);
+        textYouDieRestart.SetActive(true);
         Invoke("ResetCurrentLevel",losedelay); ;
     }
 
